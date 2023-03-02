@@ -1,8 +1,8 @@
 const React = require('react')
 const { useSpring, animated } = require('@react-spring/web')
 
-const height = window.innerHeight
-const width = window.innerWidth
+const height = typeof window === 'undefined' ? 0 : window.innerHeight
+const width = typeof window === 'undefined' ? 0 : window.innerWidth
 
 const settings = {
   maxTilt: 25, // in deg
